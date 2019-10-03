@@ -13,25 +13,24 @@
           "options": {
             "outputPath": "dist",
             "index": "src/index.html",
-            "main": "src/main.ts",
-            "tsConfig": "src/tsconfig.json",
-            "polyfills": "src/polyfills.ts",
-            "assets": [
-              "src/assets",
+          "main": "src/main.ts",
+          "tsConfig": "src/tsconfig.json",
+          "polyfills": "src/polyfills.ts",
+          "assets": [
+            "src/assets",
               "src/favicon.ico"
             ],
             "styles": [
-              "node_modules/font-awesome/css/font-awesome.min.css",
-              "node_modules/admin-lte/bootstrap/css/bootstrap.min.css",
-              "node_modules/admin-lte/dist/css/AdminLTE.min.css",
-              "node_modules/admin-lte/dist/css/skins/skin-red.min.css",
-              "node_modules/admin-lte/plugins/iCheck/flat/red.css",
-              "src/styles.css"
+              {"input": "node_modules/admin-lte/bootstrap/css/bootstrap.min.css"},
+              {"input": "node_modules/admin-lte/dist/css/AdminLTE.min.css"},
+              {"input": "node_modules/admin-lte/dist/css/skins/skin-red.min.css"},
+              {"input": "node_modules/admin-lte/plugins/iCheck/flat/red.css"},
+              {"input": "src/styles.css"}
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/admin-lte/bootstrap/js/bootstrap.min.js",
-              "node_modules/admin-lte/dist/js/app.min.js"
+              {"input": "node_modules/jquery/dist/jquery.min.js"},
+              {"input": "node_modules/admin-lte/bootstrap/js/bootstrap.min.js"},
+              {"input": "node_modules/admin-lte/dist/js/app.min.js"}
             ]
           },
           "configurations": {
@@ -47,8 +46,8 @@
               "buildOptimizer": true,
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "src": "src/environments/environment.ts",
+                  "replaceWith": "src/environments/environment.prod.ts"
                 }
               ]
             }
@@ -78,18 +77,17 @@
             "karmaConfig": "./karma.conf.js",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.spec.json",
-            "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/admin-lte/bootstrap/js/bootstrap.min.js",
-              "node_modules/admin-lte/dist/js/app.min.js"
-            ],
             "styles": [
-              "node_modules/font-awesome/css/font-awesome.min.css",
-              "node_modules/admin-lte/bootstrap/css/bootstrap.min.css",
-              "node_modules/admin-lte/dist/css/AdminLTE.min.css",
-              "node_modules/admin-lte/dist/css/skins/skin-red.min.css",
-              "node_modules/admin-lte/plugins/iCheck/flat/red.css",
-              "src/styles.css"
+              {"input": "node_modules/admin-lte/bootstrap/css/bootstrap.min.css"},
+              {"input": "node_modules/admin-lte/dist/css/AdminLTE.min.css"},
+              {"input": "node_modules/admin-lte/dist/css/skins/skin-red.min.css"},
+              {"input": "node_modules/admin-lte/plugins/iCheck/flat/red.css"},
+              {"input": "src/styles.css"}
+            ],
+            "scripts": [
+              {"input": "node_modules/jquery/dist/jquery.min.js"},
+              {"input": "node_modules/admin-lte/bootstrap/js/bootstrap.min.js"},
+              {"input": "node_modules/admin-lte/dist/js/app.min.js"}
             ],
             "assets": [
               "src/assets",
