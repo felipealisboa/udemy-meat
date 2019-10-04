@@ -45,7 +45,7 @@ export class RestaurantsComponent implements OnInit {
     this.searchForm = this.fb.group({
       searchControl: this.searchControl
     })
-
+console.log("RestaurantsComponent function ngOnInit")
     this.searchControl.valueChanges
       .pipe(
         debounceTime(500),

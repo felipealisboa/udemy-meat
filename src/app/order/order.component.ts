@@ -87,7 +87,7 @@ export class OrderComponent implements OnInit {
   checkOrder(order: Order) {
     order.orderItems = this.cartItems()
       .map((item: CartItem) => new OrderItem(item.quantity, item.menuItem.id));
-
+console.log("OrderComponent function checkOrder")
       this.orderService.checkOrder(order)
         .pipe(tap((orderId: string) => {
           this.orderId = orderId;

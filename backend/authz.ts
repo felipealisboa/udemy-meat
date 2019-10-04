@@ -11,7 +11,7 @@ export const handleAuthorization =
       resp.setHeader('WWW-Authenticate', 'Bearer token_type="JWT"')
       resp.status(401).json({message: 'Você precisa se autenticar.'})
     }else {
-      jwt.verify(token, 'meat-api-password', (error, decoded) => {
+      jwt.verify(token, 'meat-app-password', (error, decoded) => {
         if(decoded) {
           next()
         } else {

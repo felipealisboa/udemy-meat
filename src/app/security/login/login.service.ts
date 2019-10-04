@@ -25,6 +25,7 @@ export class LoginService {
   }
 
   login(email: string, password: string): Observable<User> {
+    console.log(`Login.service function login: catch email: ${email} and password: ${password}`)
     return this.http.post<User>(`${MEAT_API}/login`,
                         {email: email, password: password})
                     .pipe(tap(user => this.user = user))

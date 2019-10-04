@@ -6,7 +6,7 @@ exports.handleAuthentication = function (req, resp) {
     var user = req.body;
     if (isValid(user)) {
         var dbUser = users_1.users[user.email];
-        var token = jwt.sign({ sub: dbUser.email, iss: 'meat-app' }, 'meat-api-password');
+        var token = jwt.sign({ sub: dbUser.email, iss: 'meat-app' }, 'meat-app-password');
         resp.json({ name: dbUser.name, email: dbUser.email, acessToken: token });
     }
     else {

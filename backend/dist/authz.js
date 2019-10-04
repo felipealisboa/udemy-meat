@@ -8,7 +8,7 @@ exports.handleAuthorization = function (req, resp, next) {
         resp.status(401).json({ message: 'Você precisa se autenticar.' });
     }
     else {
-        jwt.verify(token, 'meat-api-password', function (error, decoded) {
+        jwt.verify(token, 'meat-app-password', function (error, decoded) {
             if (decoded) {
                 next();
             }
